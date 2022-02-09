@@ -1,0 +1,45 @@
+.background_image {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.title_container {
+  display: flex;
+  margin-top: 30px;
+}
+
+.title_subContainer {
+  display: flex;
+  margin-left: 20px;
+  color: antiquewhite;
+}
+.title_subContainer h3 {
+  margin-right: 30px;
+}
+
+.title_container h1 {
+  margin-left: 20px;
+  color: antiquewhite;
+}
+
+.container p {
+  color: antiquewhite;
+}
+
+.genresContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.genresContainer li {
+  list-style: none;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  background-color: aquamarine;
+  padding: 10px;
+  border-radius: 20%;
+}

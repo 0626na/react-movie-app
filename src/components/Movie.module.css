@@ -1,0 +1,38 @@
+.movieContainer {
+  display: flex;
+  margin-bottom: 20px;
+  background-color: #f3f4f6;
+  padding: 50px;
+  border-radius: 10%;
+}
+
+.movieContainer h2 a {
+  text-decoration: none;
+  color: black;
+}
+
+.movieContainer ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movieContainer li {
+  list-style: none;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  background-color: aquamarine;
+  padding: 10px;
+  border-radius: 20%;
+}
+
+.movieContainer img {
+  width: 300px;
+  height: 200px;
+}
+.movieContainer p {
+  text-align: justify;
+}
+
+.description {
+  margin-left: 15px;
+}
