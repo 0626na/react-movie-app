@@ -1,30 +1,18 @@
-import { useState, useEffect } from "react";
+import { useQuery } from "react-query";
+import { getMovies } from "../Api";
 import Movie from "../components/Movie";
 import style from "./Home.module.css";
 
 function Home() {
-  const [loading, setLoading] = useState(true);
-  const [movies, setMovies] = useState([]);
-  const getMovies = async () => {
-    const json = await (
-      await fetch(
-        "https://yts.mx/api/v2/list_movies.json?minimum_rating=8.8&sort_by=year"
-      )
-    ).json();
-    setMovies(json.data.movies);
-    console.log(json.data.movies);
-    setLoading(false);
-  };
-  useEffect(() => {
-    getMovies();
-  }, []);
+  const { isLoading, data: movies } = useQuery("movies", getMovies);
+
   return (
     <div className={style.container}>
-      {loading ? (
+      {isLoading ? (
         <h1>Loading...</h1>
       ) : (
         <div className={style.home}>
-          {movies.map((movie) => (
+          {movies.data.movies.map((movie) => (
             <Movie
               key={movie.id}
               coverImg={movie.medium_cover_image}
